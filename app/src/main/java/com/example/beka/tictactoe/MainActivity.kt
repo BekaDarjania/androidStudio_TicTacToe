@@ -96,10 +96,10 @@ class MainActivity : AppCompatActivity() {
         if (!button3.text.toString().isEmpty() && button3.text.toString().equals(button6.text.toString()) && button6.text.toString().equals(button9.text.toString()))
             showMessage(button1.text.toString())
         else
-        if (!button1.text.toString().isEmpty() && button1.text.toString().equals(button5.text.toString()) && button5.text.toString().equals(button9.text.toString()))
+        if (!button5.text.toString().isEmpty() && button1.text.toString().equals(button5.text.toString()) && button5.text.toString().equals(button9.text.toString()))
             showMessage(button1.text.toString())
         else
-        if (!button3.text.toString().isEmpty() && button3.text.toString().equals(button5.text.toString()) && button5.text.toString().equals(button7.text.toString()))
+        if (!button5.text.toString().isEmpty() && button3.text.toString().equals(button5.text.toString()) && button5.text.toString().equals(button7.text.toString()))
             showMessage(button3.text.toString())
         else
         // cehck if every space is taken
@@ -130,6 +130,12 @@ class MainActivity : AppCompatActivity() {
 
         // give first choice to winner
         isFirstPlayer = player1 >= player2
+
+        if (isFirstPlayer) {
+            choiseOfPlayer.text = "player 1"
+        } else {
+            choiseOfPlayer.text = "player "
+        }
 
         button1.isClickable = true
         button1.text = ""
